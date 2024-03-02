@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Riddle Page</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+      #image {
+        display: block;
+        margin: 0 auto;
+        width: 300px;
+      }
+      #answerInput {
+        margin-top: 20px;
+      }
+      #submitButton {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Can you solve this riddle?</h1>
+    <img id="image" src="riddle-image.jpg" alt="Riddle image">
+    <p>I have keys but no locks. I have space but no room. You can enter, but can't go outside. What am I?</p>
+    <input id="answerInput" type="text" placeholder="Enter your answer here">
+    <button id="submitButton" onclick="checkAnswer()">Submit</button>
+    <script>
+      function checkAnswer() {
+        const answer = document.getElementById("answerInput").value;
+        if (answer.toLowerCase() === "keyboard") {
+          window.location.href = "https://www.example.com";
+        } else {
+          alert("Sorry, that's not the correct answer.");
+        }
+      }
+    </script>
+  </body>
+</html>
